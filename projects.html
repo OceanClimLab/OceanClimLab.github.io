@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Ocean Climate Lab</title>
+  <meta name="description" content="The Ocean Climate Lab at the Centre for Atmospheric Sciences, IIT Delhi, studies ocean warming, sea-level rise, circulation, marine heatwaves, and the ocean's role in a changing climate." />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Ocean Climate Lab" />
+  <meta property="og:description" content="Studying the global ocean and its role in a changing climate." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <script>document.documentElement.classList.add('js');</script>
+  <style>
+    /* PI social / research profile icons */
+    .pi__social{ display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+    .pi__social a{ width:42px; height:42px; border-radius:10px; border:1px solid var(--c-line);
+      background:#fff; display:grid; place-items:center; padding:7px;
+      transition:transform .15s ease, border-color .2s ease, box-shadow .2s ease; }
+    .pi__social a:hover{ transform:translateY(-2px); border-color:var(--c-current);
+      box-shadow:0 8px 18px -10px rgba(8,34,48,.45); }
+    .pi__social img{ width:100%; height:100%; object-fit:contain; display:block; }
+    .pill--cv{ background:var(--c-foam); border-color:var(--c-current); color:var(--c-ocean); font-weight:600; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html" aria-label="Ocean Climate Lab home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28">
+            <path d="M2 20 Q8 14 16 18 T30 16" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M2 25 Q8 19 16 23 T30 21" fill="none" stroke="currentColor" stroke-width="1.6" opacity="0.6"/>
+            <path d="M2 15 Q8 9 16 13 T30 11" fill="none" stroke="currentColor" stroke-width="1.6" opacity="0.35"/>
+          </svg>
+        </span>
+        <span class="brand__text">Ocean Climate Lab</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__menu" id="navMenu" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="projects.html" class="is-active" aria-current="page">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="join.html" class="nav__cta">Join us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section section--alt" id="projects">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Projects</p>
+          <h2 class="section__title">Funded research</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project reveal">
+            <p class="project__funder">ANRF</p>
+            <h3 class="project__title">Project title</h3>
+            <p class="project__desc">
+              <!-- TODO: add a short description of the ANRF-funded project, the questions it
+                   tackles, and the timeline. -->
+              Short description of the project funded by the Anusandhan National Research Foundation.
+            </p>
+          </article>
+
+          <article class="project reveal">
+            <p class="project__funder">ISRO</p>
+            <h3 class="project__title">Project title</h3>
+            <p class="project__desc">
+              <!-- TODO: add a short description of the ISRO-funded project. -->
+              Short description of the project funded by the Indian Space Research Organisation.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__text">Ocean Climate Lab</span>
+        <p>Centre for Atmospheric Sciences, IIT Delhi</p>
+      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="join.html">Join us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="container footer__legal">
+      <p>&copy; <span id="year">2025</span> Ocean Climate Lab. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
