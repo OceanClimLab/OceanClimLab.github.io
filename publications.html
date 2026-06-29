@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications — CryOClim-Lab</title>
+  <meta name="description" content="The CryOClim-Lab at the Centre for Atmospheric Sciences, IIT Delhi, studies ocean warming, sea-level rise, circulation, marine heatwaves, and the ocean's role in a changing climate." />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="CryOClim-Lab" />
+  <meta property="og:description" content="Studying the global ocean and its role in a changing climate." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <script>document.documentElement.classList.add('js');</script>
+  <style>
+    /* PI social icons (shared head style) */
+    .pi__social{ display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+    .pi__social a{ width:42px; height:42px; border-radius:10px; border:1px solid var(--c-line);
+      background:#fff; display:grid; place-items:center; padding:7px; transition:transform .15s ease, border-color .2s ease, box-shadow .2s ease; }
+    .pi__social a:hover{ transform:translateY(-2px); border-color:var(--c-current); box-shadow:0 8px 18px -10px rgba(8,34,48,.45); }
+    .pi__social img{ width:100%; height:100%; object-fit:contain; display:block; }
+    .pill--cv{ background:var(--c-foam); border-color:var(--c-current); color:var(--c-ocean); font-weight:600; }
+
+    /* Publications header row: title + search */
+    .pub-head{ display:flex; align-items:center; justify-content:space-between; gap:1.5rem 2rem; flex-wrap:wrap; margin-bottom:1.4rem; }
+    .pub-head h2{ font-family:var(--font-display); font-weight:700; font-size:clamp(1.7rem,3.2vw,2.3rem); color:var(--c-ink); margin:0; letter-spacing:-.01em; }
+    .pub-divider{ border:0; border-top:1px solid var(--c-line); margin:0 0 2.2rem; }
+
+    /* Search */
+    .pub-search{ position:relative; display:flex; align-items:center; width:min(400px,100%); margin:0; }
+    .pub-search__icon{ position:absolute; left:16px; width:18px; height:18px; color:var(--c-slate); pointer-events:none; }
+    .pub-search__input{ width:100%; font-family:var(--font-body); font-size:.98rem; color:var(--c-ink);
+      padding:.8rem 2.8rem; border:1.5px solid var(--c-line); border-radius:999px; background:#fff; transition:border-color .2s ease, box-shadow .2s ease; }
+    .pub-search__input::placeholder{ color:var(--c-slate); }
+    .pub-search__input:focus{ outline:none; border-color:var(--c-current); box-shadow:0 0 0 3px rgba(26,134,160,.15); }
+    .pub-search__clear{ position:absolute; right:11px; width:28px; height:28px; border:0; border-radius:50%;
+      background:var(--c-foam); color:var(--c-slate); font-size:1.15rem; line-height:1; cursor:pointer; display:grid; place-items:center; }
+    .pub-search__clear:hover{ background:var(--c-line); color:var(--c-ink); }
+    .pub-search__clear[hidden]{ display:none; }
+    .pub-search__status{ font-family:var(--font-mono); font-size:.78rem; color:var(--c-slate); margin:0 0 1.4rem; min-height:1.1em; }
+    .pub-noresults{ color:var(--c-slate); font-style:italic; padding:1rem 0; display:none; }
+
+    /* Numbered continuous citations */
+    .pub-list{ list-style:none; counter-reset:pub; margin:0; padding:0; }
+    .refpub{ counter-increment:pub; position:relative; padding:0 0 1.55rem 2.9rem; line-height:1.62; font-size:1.02rem; color:var(--c-ink); }
+    .refpub::before{ content:counter(pub) "."; position:absolute; left:0; top:0; font-family:var(--font-display); font-weight:700; font-size:1.05rem; color:#D9536A; }
+    .refpub strong{ font-weight:700; color:var(--c-ink); }
+    a.refpub__title{ color:#2D6CB2; font-weight:600; }
+    a.refpub__title:hover{ text-decoration:underline; }
+    .refpub em{ font-style:italic; color:#33454d; }
+    .badge{ display:inline-block; font-family:var(--font-mono); font-size:.68rem; font-weight:700; letter-spacing:.03em;
+      padding:.26rem .62rem; border-radius:999px; white-space:nowrap; vertical-align:baseline; margin-left:.2rem; }
+    .badge--review,.badge--revision{ background:#FBF1D4; color:#94762B; }
+    .badge--accepted{ background:#D8F0DD; color:#3C8A5B; }
+    .badge--inpress{ background:#E7F0FB; color:#2D6CB2; }
+    .refpub.is-hidden{ display:none; }
+    .pub-scholar{ margin-top:1.8rem; font-size:.92rem; color:var(--c-slate); }
+  </style>
+  <link rel="icon" type="image/png" href="main-logo/cryoclim-emblem.png" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html" aria-label="CryOClim-Lab home">
+        <span class="brand__mark" aria-hidden="true">
+          <img class="brand__img" src="main-logo/cryoclim-emblem.png" alt="" style="height:38px;width:auto;display:block">
+        </span>
+        <span class="brand__text">Cry<span style="color:#DC143C">O</span>Clim-Lab</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__menu" id="navMenu" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html" class="is-active" aria-current="page">Publications</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="join.html" class="nav__cta">Join us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ PUBLICATIONS ============ -->
+    <section class="section" id="publications">
+      <div class="container">
+        <div class="pub-head reveal">
+          <h2>Journal Articles</h2>
+          <div class="pub-search">
+            <svg class="pub-search__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <input type="search" id="pubSearch" class="pub-search__input" placeholder="Search by author, year, title, or journal" aria-label="Search publications" autocomplete="off">
+            <button type="button" id="pubSearchClear" class="pub-search__clear" aria-label="Clear search" hidden>&times;</button>
+          </div>
+        </div>
+        <hr class="pub-divider">
+        <p class="pub-search__status" id="pubSearchStatus" aria-live="polite"></p>
+        <p class="pub-noresults" id="pubNoResults">No publications match your search.</p>
+
+        <ol class="pub-list reveal">
+          <li class="refpub"><strong>Lyu, Y.</strong>, Bindoff, N. L., Mohapatra, S., <strong>Rathore, S.</strong>, and Phillips, H. E. (2025) A Comprehensive Evaluation of Ocean Salinity in CMIP6 Historical Simulations <span class="badge badge--review">Under Review</span></li>
+          <li class="refpub"><strong>de Lavergne, C.</strong>, <strong>Rathore, S.</strong>, Madec, G., Sall&eacute;e, J.-B., Eth&eacute;, C., Nasser, A., Millet, B., and Vancoppenolle, M. (2026) <a class="refpub__title" href="https://doi.org/10.1029/2024MS004824" target="_blank" rel="noopener">Effects of Improved Tidal Mixing in the NEMO One-Degree Global Ocean Model</a>, <em>Journal of Advances in Modeling Earth Systems</em></li>
+          <li class="refpub"><strong>Lyu, Y.</strong>, Bindoff, N. L., Mohapatra, S., <strong>Rathore, S.</strong>, and Phillips, H. E. (2025) <a class="refpub__title" href="https://doi.org/10.1029/2024JC022278" target="_blank" rel="noopener">Global Water Cycle Pattern Amplification: Contributing Factors and Mechanisms</a>, <em>Journal of Geophysical Research: Oceans</em></li>
+          <li class="refpub"><strong>Sall&eacute;e, J.-B.</strong>, et al., incl. <strong>Rathore, S.</strong> (2023) <a class="refpub__title" href="https://doi.org/10.1098/rsta.2022.0056" target="_blank" rel="noopener">Southern Ocean Carbon and Heat Impact on Climate</a>, <em>Philosophical Transactions of the Royal Society A</em></li>
+          <li class="refpub"><strong>Rathore, S.</strong>, Goyal, R., Jangir, B., Ummenhofer, C. C., Feng, M., and Mishra, M. (2022) <a class="refpub__title" href="https://doi.org/10.3389/fclim.2022.861477" target="_blank" rel="noopener">Interactions Between a Marine Heatwave and Tropical Cyclone Amphan in the Bay of Bengal in 2020</a>, <em>Frontiers in Climate</em></li>
+          <li class="refpub"><strong>Rathore, S.</strong>, Bindoff, N. L., Ummenhofer, C. C., Phillips, H. E., Feng, M., and Mishra, M. (2021) <a class="refpub__title" href="https://doi.org/10.1175/JCLI-D-20-0625.1" target="_blank" rel="noopener">Improving Australian Rainfall Prediction Using Sea Surface Salinity</a>, <em>Journal of Climate</em></li>
+          <li class="refpub"><strong>Rathore, S.</strong>, et al. (2021) Using Sea Surface Salinity to Foretell Australian Rainfall (feature article), <em>Australian Marine Sciences Association (AMSA) Bulletin</em></li>
+          <li class="refpub"><strong>Rathore, S.</strong>, Bindoff, N. L., Ummenhofer, C. C., Phillips, H. E., and Feng, M. (2020) <a class="refpub__title" href="https://doi.org/10.1175/JCLI-D-19-0579.1" target="_blank" rel="noopener">Near-Surface Salinity Reveals the Oceanic Sources of Moisture for Australian Precipitation through Atmospheric Moisture Transport</a>, <em>Journal of Climate</em></li>
+          <li class="refpub"><strong>Rathore, S.</strong>, Bindoff, N. L., Phillips, H. E., and Feng, M. (2020) <a class="refpub__title" href="https://doi.org/10.1038/s41467-020-15754-3" target="_blank" rel="noopener">Recent Hemispheric Asymmetry in Global Ocean Warming Induced by Climate Change and Internal Variability</a>, <em>Nature Communications</em></li>
+          <li class="refpub"><strong>Bindoff, N. L.</strong>, et al. (2019) <a class="refpub__title" href="https://www.ipcc.ch/srocc/chapter/chapter-5/" target="_blank" rel="noopener">Changing Ocean, Marine Ecosystems, and Dependent Communities</a>, <em>IPCC Special Report on the Ocean and Cryosphere in a Changing Climate (SROCC)</em></li>
+        </ol>
+
+        <p class="pub-scholar">For the complete, always-current list, see the <a href="https://scholar.google.com/citations?user=Mov2n_oAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google&nbsp;Scholar profile</a>.</p>
+
+        <!--
+        ADD A PAPER: copy one <li class="refpub"> ... </li> line above.
+        Format:  Authors (Year) <a class="refpub__title" href="https://doi.org/DOI" ...>Title</a>, <em>Journal</em>
+        Bold an author with <strong>...</strong>. The title links to the DOI.
+        STATUS BADGE (optional, after the journal):
+          <span class="badge badge--review">Under Review</span>
+          <span class="badge badge--revision">Under Revision</span>
+          <span class="badge badge--accepted">Accepted</span>
+          <span class="badge badge--inpress">In Press</span>
+        -->
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span style="display:flex;align-items:center;gap:11px;">
+          <img src="main-logo/cryoclim-emblem.png" alt="" style="height:36px;width:auto;display:block;flex:0 0 auto">
+          <span class="brand__text">Cry<span style="color:#DC143C">O</span>Clim-Lab</span>
+        </span>
+        <p>Centre for Atmospheric Sciences, IIT Delhi</p>
+      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="join.html">Join us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="container footer__legal">
+      <p>&copy; <span id="year">2025</span> CryOClim-Lab. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var input = document.getElementById('pubSearch');
+      if (!input) return;
+      var clearBtn = document.getElementById('pubSearchClear');
+      var status   = document.getElementById('pubSearchStatus');
+      var noRes    = document.getElementById('pubNoResults');
+      var pubs  = [].slice.call(document.querySelectorAll('#publications .refpub'));
+      var total = pubs.length;
+      pubs.forEach(function (p) { p._text = (p.textContent || '').toLowerCase().replace(/\s+/g, ' '); });
+
+      function apply() {
+        var q = input.value.trim().toLowerCase();
+        clearBtn.hidden = q.length === 0;
+        var shown = 0;
+        pubs.forEach(function (p) {
+          var match = q === '' || p._text.indexOf(q) !== -1;
+          p.classList.toggle('is-hidden', !match);
+          if (match) shown++;
+        });
+        noRes.style.display = (shown === 0) ? 'block' : 'none';
+        status.textContent = q === '' ? '' : (shown + ' of ' + total + ' publications match “' + input.value.trim() + '”');
+      }
+      input.addEventListener('input', apply);
+      clearBtn.addEventListener('click', function () { input.value = ''; apply(); input.focus(); });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — CryOClim-Lab</title>
+  <meta name="description" content="The CryOClim-Lab at the Centre for Atmospheric Sciences, IIT Delhi, studies ocean warming, sea-level rise, circulation, marine heatwaves, and the ocean's role in a changing climate." />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="CryOClim-Lab" />
+  <meta property="og:description" content="Studying the global ocean and its role in a changing climate." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <script>document.documentElement.classList.add('js');</script>
+  <style>
+    /* PI social / research profile icons */
+    .pi__social{ display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+    .pi__social a{ width:42px; height:42px; border-radius:10px; border:1px solid var(--c-line);
+      background:#fff; display:grid; place-items:center; padding:7px;
+      transition:transform .15s ease, border-color .2s ease, box-shadow .2s ease; }
+    .pi__social a:hover{ transform:translateY(-2px); border-color:var(--c-current);
+      box-shadow:0 8px 18px -10px rgba(8,34,48,.45); }
+    .pi__social img{ width:100%; height:100%; object-fit:contain; display:block; }
+    .pill--cv{ background:var(--c-foam); border-color:var(--c-current); color:var(--c-ocean); font-weight:600; }
+  </style>
+  <link rel="icon" type="image/png" href="main-logo/cryoclim-emblem.png" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html" aria-label="CryOClim-Lab home">
+        <span class="brand__mark" aria-hidden="true">
+          <img class="brand__img" src="main-logo/cryoclim-emblem.png" alt="" style="height:38px;width:auto;display:block">
+        </span>
+        <span class="brand__text">Cry<span style="color:#DC143C">O</span>Clim-Lab</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__menu" id="navMenu" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="is-active" aria-current="page">Contact</a>
+        <a href="join.html" class="nav__cta">Join us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 class="section__title">Find us</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <h3>Prof. Saurabh Rathore</h3>
+            <dl class="contact-dl">
+              <div><dt>Email</dt><dd><a href="mailto:srathore@iitd.ac.in">srathore@iitd.ac.in</a></dd></div>
+              <div><dt>Office</dt><dd>+91 11 2659 1309</dd></div>
+              <div><dt>Room</dt><dd>415H, 3rd floor, 6th Block</dd></div>
+            </dl>
+          </div>
+
+          <div class="contact-card reveal">
+            <h3>Centre for Atmospheric Sciences</h3>
+            <dl class="contact-dl">
+              <div><dt>Office</dt><dd>+91 11 2659 1301 / 602</dd></div>
+              <div><dt>Fax</dt><dd>+91 11 2659 1386</dd></div>
+              <div><dt>Email</dt><dd><a href="mailto:hodcas@admin.iitd.ac.in">hodcas@admin.iitd.ac.in</a></dd></div>
+              <div><dt>Address</dt><dd>Block VI, IIT Delhi, Hauz Khas, New Delhi 110 016, India</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="contact-map reveal">
+          <iframe
+            title="IIT Delhi location map"
+            src="https://www.google.com/maps?q=Indian+Institute+of+Technology+Delhi&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span style="display:flex;align-items:center;gap:11px;">
+          <img src="main-logo/cryoclim-emblem.png" alt="" style="height:36px;width:auto;display:block;flex:0 0 auto">
+          <span class="brand__text">Cry<span style="color:#DC143C">O</span>Clim-Lab</span>
+        </span>
+        <p>Centre for Atmospheric Sciences, IIT Delhi</p>
+      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="join.html">Join us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="container footer__legal">
+      <p>&copy; <span id="year">2025</span> CryOClim-Lab. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
