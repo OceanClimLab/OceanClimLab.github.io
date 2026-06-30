@@ -108,6 +108,6 @@
     e.preventDefault();
     var href = a.getAttribute("href");
     html.classList.add("ccl-leaving");
-    window.setTimeout(function () { window.location.href = href; }, 400);
+    window.setTimeout(function () { window.location.href = href; }, 1600);
   });
 })();
