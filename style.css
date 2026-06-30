@@ -396,13 +396,13 @@ html.js body::after{
 }
 html.js body::before{                 /* opaque backdrop */
   z-index:9998; background:var(--c-mist);
-  animation: cclCurtain 3.2s cubic-bezier(.22,.61,.36,1) forwards;
+  animation: cclCurtain 2.8s cubic-bezier(.22,.61,.36,1) forwards;
 }
 html.js body::after{                   /* logo on top */
   z-index:9999;
   background:url('main-logo/cryoclim-emblem.png') no-repeat center center;
   background-size:112px; transform-origin:center;
-  animation: cclLogo 3.2s cubic-bezier(.22,.61,.36,1) forwards;
+  animation: cclLogo 2.8s cubic-bezier(.22,.61,.36,1) forwards;
 }
 @keyframes cclCurtain{
   0%   { opacity:1; }
@@ -410,10 +410,10 @@ html.js body::after{                   /* logo on top */
   100% { opacity:0; visibility:hidden; }
 }
 @keyframes cclLogo{
-  0%   { opacity:0; transform:scale(.85); }
-  30%  { opacity:1; transform:scale(1); }
-  80%  { opacity:1; transform:scale(1); }
-  100% { opacity:0; transform:scale(1.08); visibility:hidden; }
+  0%   { opacity:0; transform:scale(.82); }
+  38%  { opacity:1; transform:scale(1); }
+  82%  { opacity:1; transform:scale(1); }
+  100% { opacity:0; transform:scale(1.10); visibility:hidden; }
 }
 /* replay the splash when navigating to another page */
 html.ccl-leaving body::before{ animation: cclCurtainBack .42s ease forwards; }
