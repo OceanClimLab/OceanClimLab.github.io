@@ -396,13 +396,13 @@ html.js body::after{
 }
 html.js body::before{                 /* opaque backdrop */
   z-index:9998; background:var(--c-mist);
-  animation: cclCurtain 1.1s ease forwards;
+  animation: cclCurtain 2s ease forwards;
 }
 html.js body::after{                   /* logo on top */
   z-index:9999;
   background:url('main-logo/cryoclim-emblem.png') no-repeat center center;
   background-size:112px; transform-origin:center;
-  animation: cclLogo 1.1s ease forwards;
+  animation: cclLogo 2s ease forwards;
 }
 @keyframes cclCurtain{
   0%   { opacity:1; }
