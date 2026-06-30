@@ -392,14 +392,14 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.12; font-weigh
    is opaque while still small, so the whole 0.4x -> 1x zoom is visible. */
 html.js body::before{                 /* white backdrop */
   content:""; position:fixed; inset:0; z-index:99998; background:#ffffff;
-  animation: cclCurtainOut .8s linear forwards;
+  animation: cclCurtainOut 1.4s linear forwards;
   pointer-events:none;
 }
 html.js body::after{                  /* logo: comes outward from the back */
   content:""; position:fixed; inset:0; z-index:99999;
   background:url('main-logo/cryoclim-emblem.png') no-repeat center center;
   background-size:100px; transform-origin:center;
-  animation: cclZoomIn .8s ease-in-out forwards;   /* even curve: no snap */
+  animation: cclZoomIn 1.4s ease-in-out forwards;   /* even curve: no snap */
   pointer-events:none;
 }
 @media (prefers-reduced-motion: reduce){     /* no zoom for reduced-motion users */
