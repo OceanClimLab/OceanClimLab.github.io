@@ -400,8 +400,8 @@ html.js body::after{                  /* logo: one smooth, continuous zoom + dis
   content:""; position:fixed; inset:0; z-index:99999;
   background:url('main-logo/cryoclim-emblem.png') no-repeat center center;
   background-size:100px; transform-origin:center;
-  animation: cclZoom 1.8s cubic-bezier(.22,.61,.36,1) forwards,
-             cclFade 1.8s linear forwards;
+  animation: cclZoom 1.5s cubic-bezier(.22,.61,.36,1) forwards,
+             cclFade 1.5s linear forwards;
   pointer-events:none;
 }
 @media (prefers-reduced-motion: reduce){     /* no zoom for reduced-motion users */
